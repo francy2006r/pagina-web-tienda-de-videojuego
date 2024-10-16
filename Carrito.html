@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Pixel Playground</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #4291f8;
+            color: #333;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #ff4040;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* Contenedor principal */
+        .content {
+            padding: 20px;
+        }
+
+        /* Selector de moneda */
+        .currency-selector {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        select {
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        /* Sección de juegos */
+        .games-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .game-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .game-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .game-title {
+            font-size: 18px;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .platforms {
+            margin-top: 10px;
+        }
+
+        .platforms span {
+            display: inline-block;
+            background-color: #007fb2;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-right: 5px;
+            font-size: 14px;
+        }
+
+        .price {
+            margin-top: 10px;
+            font-size: 16px;
+            color: rgb(5, 5, 5);
+        }
+
+        /* Botón de agregar al carrito */
+        .add-to-cart-btn {
+            background-color: #007fb2;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #005f8d;
+        }
+
+        /* Carrito de compras */
+        .cart {
+            margin-top: 40px;
+        }
+
+        .cart h2 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .cart-items {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .cart-items li {
+            background-color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cart-items li span {
+            font-size: 18px;
+        }
+
+        /* Total */
+        .total {
+            margin-top: 20px;
+            font-size: 20px;
+            color: rgb(8, 8, 8);
+        }
+
+        footer {
+            background-color: #ff4040;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>Carrito de Compras - Pixel Playground</h1>
+    </header>
+
+    <!-- Contenido principal -->
+    <div class="content">
+        <!-- Selector de moneda -->
+        <div class="currency-selector">
+            <label for="currency">Seleccionar Moneda: </label>
+            <select id="currency" onchange="updatePrices()">
+                <option value="USD" data-rate="1"> Dólar ($)</option>
+                <option value="HNL" data-rate="24">Lempira hondureño (HNL)</option>
+                <option value="EUR" data-rate="0.85"> Euro (€)</option>
+                <option value="MXN" data-rate="17"> Peso Mexicano (MXN)</option>
+                <option value="KRW" data-rate="50,000"> Won surcoreano (KRW)</option>
+
+            </select>
+        </div>
+
+        <h2>Juegos Disponibles</h2>
+
+        <!-- Lista de juegos -->
+        <div class="games-list">
+            <!-- Juego 1 -->
+            <div class="game-item" data-title="Far Cry 4" data-price="100" data-platforms="PS5, PS4, PC">
+                <img src="/Img/Far Cry 4.jpg" alt="Far Cry 4">
+                <h3 class="game-title">Far Cry 4</h3>
+                <div class="platforms">
+                    <span>PS5</span>
+                    <span>PS4</span>
+                    <span>PC</span>
+                </div>
+                <div class="price">$100.00</div>
+                <button class="add-to-cart-btn">Agregar al carrito</button>
+            </div>
+
+            <!-- Juego 2 -->
+            <div class="game-item" data-title="The villainess 악녀 (Jeong Byeong-gil) 2017" data-price="70" data-platforms="Switch">
+                <img src="/Img/The villainess 악녀 (Jeong Byeong-gil) 2017.jpg" alt="The villainess 악녀 (Jeong Byeong-gil) 2017">
+                <h3 class="game-title">The villainess 악녀 (Jeong Byeong-gil) 2017</h3>
+                <div class="platforms">
+                    <span>Switch</span>
+                </div>
+                <div class="price">$70.00</div>
+                <button class="add-to-cart-btn">Agregar al carrito</button>
+            </div>
+
+            <!-- Juego 3 -->
+            <div class="game-item" data-title="Ainbo, Spirit of the Amazon" data-price="80" data-platforms="PS5, Xbox Series X, PC">
+                <img src="/Img/Ainbo, Spirit of the Amazon.jpg" alt="Ainbo, Spirit of the Amazon">
+                <h3 class="game-title">Ainbo, Spirit of the Amazon</h3>
+                <div class="platforms">
+                    <span>PS5</span>
+                    <span>Xbox Series X</span>
+                    <span>PC</span>
+                </div>
+                <div class="price">$80.00</div>
+                <button class="add-to-cart-btn">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <!-- Carrito de compras -->
+        <div class="cart">
+            <h2>Tu Carrito</h2>
+            <ul class="cart-items"></ul>
+            <div class="total">Total: $0.00</div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        © 2024 Pixel Playground. Todos los derechos reservados.
+    </footer>
+
+    <!-- Script para manejar el carrito y la conversión de moneda -->
+    <script>
+        const cartItemsList = document.querySelector('.cart-items');
+        const totalElement = document.querySelector('.total');
+        let total = 0;
+        let currencyRate = 1;
+        let currencySymbol = "$";
+
+        // Función para actualizar precios cuando se cambia la moneda
+        function updatePrices() {
+            const currencySelect = document.getElementById('currency');
+            const selectedCurrency = currencySelect.options[currencySelect.selectedIndex];
+            currencyRate = parseFloat(selectedCurrency.getAttribute('data-rate'));
+            currencySymbol = selectedCurrency.value === 'USD' ? "$" : selectedCurrency.textContent.split(' ')[0];
+            
+            // Actualizar los precios de los productos
+            document.querySelectorAll('.game-item').forEach(item => {
+                const price = parseFloat(item.getAttribute('data-price'));
+                const newPrice = (price * currencyRate).toFixed(2);
+                item.querySelector('.price').textContent = `${currencySymbol}${newPrice}`;
+            });
+
+            // Actualizar el total
+            updateTotal();
+        }
+
+        // Función para agregar juego al carrito
+        function addToCart(event) {
+            const gameItem = event.target.closest('.game-item');
+            const title = gameItem.getAttribute('data-title');
+            const price = parseFloat(gameItem.getAttribute('data-price')) * currencyRate;
+
+            // Crear nuevo elemento de carrito
+            const cartItem = document.createElement('li');
+            cartItem.innerHTML = `<span>${title}</span> <span>${currencySymbol}${price.toFixed(2)}</span>`;
+            cartItemsList.appendChild(cartItem);
+
+            // Actualizar el total
+            total += price;
+            updateTotal();
+        }
+
+        // Función para actualizar el total
+        function updateTotal() {
+            totalElement.textContent = `Total: ${currencySymbol}${total.toFixed(2)}`;
+        }
+
+        // Asignar evento a cada botón de agregar al carrito
+        const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', addToCart);
+        });
+
+        // Actualizar precios cuando se cambia la moneda inicialmente
+        updatePrices();
+    </script>
+
+</body>
+</html>
+

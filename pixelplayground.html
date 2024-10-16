@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Playground - Tienda de Videojuegos</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #00a7d9;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #ff4c4c;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header img {
+            width: 50px;
+            height: 50px;
+        }
+
+        header nav {
+            flex-grow: 1;
+            text-align: right;
+            margin-right: 20px;
+        }
+
+        header nav a {
+            color: rgb(5, 0, 0);
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 20px;
+            font-size: 18px;
+        }
+
+        /* Barra lateral */
+        #sidebar {
+            width: 60px;
+            height: 44%;
+            background-color: #013342;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            padding-top: 20px;
+            z-index: 999;
+        }
+
+        #sidebar a {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        #sidebar a img {
+            width: 30px;
+            height: 30px;
+        }
+
+        /* Contenido principal */
+        #main {
+            margin-left: 60px;
+            padding: 20px;
+            padding-top: 80px;
+        }
+
+        /* Banner */
+        .banner {
+            background-color: #02696d;
+            color: rgb(14, 0, 0);
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Imagen central */
+        .hero-image {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .hero-image img {
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        /* Selección de consola */
+        .console-select {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .console-select select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 2px solid #00a7d9;
+        }
+
+        /* Lista de productos */
+        .product-list {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .product {
+            background-color: #f9f9fa;
+            width: 200px;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .product img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Botones de navegación */
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .pagination button {
+            background-color: #00a7d9;
+            color: rgb(3, 0, 0);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin: 0 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Botón de índice */
+        .index-btn {
+            background-color: #ff4c4c;
+            color: rgb(7, 0, 0);
+            padding: 10px;
+            border-radius: 5px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #ff4c4c;
+            color: rgb(7, 0, 0);
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Logo que funciona como enlace a la página principal -->
+        <a href="/Screen/pixelplayground.html">
+            <img src="/Img/OIP.jpeg" alt="Pixel Playground Logo">
+        </a>
+        <nav>
+            <a href="historia.html">Tu Historia</a>
+            <a href="juegos.html">Juegos</a>
+            <a href="programas.html">Programas</a>
+            <a href="dispositivos.html">Dispositivos</a>
+            <a href="nuevo.html">Nuevo</a>
+            <a href="laboratorio.html">Laboratorio</a>
+        </nav>
+    </header>
+
+    <div id="sidebar">
+        <a href="/Screen/Inicio.html" alt="">🏠</a>
+        <a href="/Screen/Juegos.html" alt="Juegos">🎮</a>
+        <a href="/Screen/Regalos.html" alt="Regalos">🎁</a>
+        <a href="/Screen/Agencia.html" alt="Envíos">📦</a>
+        <a href="/Screen/redesocial.html" alt="Contacto">📱</a>
+    </div>
+
+    <div id="main">
+        <!-- Banner de bienvenida -->
+        <div class="banner">
+            ¡Bienvenido a Pixel Playground! ¡Tu tienda de videojuegos favorita!
+        </div>
+
+        <!-- Imagen central -->
+        <div class="hero-image">
+            <img src="/Img/descargar-removebg-preview.png" alt="Grupo de personajes">
+        </div>
+
+       
+        </div>
+
+        <!-- Lista de productos -->
+        <div class="product-list">
+            <div class="product">
+                <img src="/Img/wrc game.jpg" alt="WRC">
+                <h3>WRC</h3>
+                <p>$49.99</p>
+            </div>
+            <div class="product">
+                <img src="/Img/resident evill 2.jpg" alt="Resident Evil 2">
+                <h3>Resident Evil 2</h3>
+                <p>$45.00</p>
+            </div>
+            <div class="product">
+                <img src="/Img/xmeen.jpg" alt="X-Men Legends II">
+                <h3>X-Men Legends II</h3>
+                <p>$50.00</p>
+            </div>
+            <div class="product">
+                <img src="/Img/good oof waar.jpg" alt="God of War">
+                <h3>God of War</h3>
+                <p>$100.00</p>
+            </div>
+        </div>
+
+        <!-- Botones de índice, siguiente y atrás -->
+        <div class="pagination">
+            <button onclick="goToPrevious()">Atrás</button>
+            <button class="index-btn" onclick="goToIndex()">Inicio</button>
+            <button onclick="goToNext()">Siguiente</button>
+        </div>
+    </div>
+
+    <footer>
+        © 2024 Pixel Playground - Todos los derechos reservados
+    </footer>
+
+    <!-- Scripts para los botones -->
+    <script>
+        function goToPrevious() {
+            // Redireccionar a la página anterior
+            window.history.back();
+        }
+
+        function goToNext() {
+            // Lógica para redireccionar a la siguiente página de productos
+            alert("Ir a la siguiente página de productos");
+        }
+
+        function goToIndex() {
+            // Redireccionar al inicio
+            window.location.href = "index.html";
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+

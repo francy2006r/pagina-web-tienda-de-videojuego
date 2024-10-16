@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta de Usuario - Pixel Playground</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            background-color: #31a7f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-container input[type="email"],
+        .form-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .form-container a {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .form-container a:hover {
+            text-decoration: underline;
+        }
+
+        .toggle-form {
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container" id="login-form">
+        <h2>Iniciar Sesión</h2>
+        <form action="/login" method="post">
+            <label for="email-login">Correo Electrónico:</label>
+            <input type="email" id="email-login" name="email" required>
+
+            <label for="password-login">Contraseña:</label>
+            <input type="password" id="password-login" name="password" required>
+
+            <input type="submit" value="Ingresar">
+        </form>
+
+        <a href="#" onclick="toggleForms('forgot-form')">¿Olvidaste tu contraseña?</a>
+        <a href="#" onclick="toggleForms('register-form')">Crear una cuenta nueva</a>
+    </div>
+
+    <div class="form-container" id="register-form" style="display: none;">
+        <h2>Crear Cuenta Nueva</h2>
+        <form action="/register" method="post">
+            <label for="email-register">Correo Electrónico:</label>
+            <input type="email" id="email-register" name="email" required>
+
+            <label for="password-register">Contraseña:</label>
+            <input type="password" id="password-register" name="password" required>
+
+            <input type="submit" value="Registrar">
+        </form>
+
+        <a href="#" onclick="toggleForms('login-form')">¿Ya tienes una cuenta? Inicia sesión</a>
+    </div>
+
+    <div class="form-container" id="forgot-form" style="display: none;">
+        <h2>Recuperar Contraseña</h2>
+        <form action="/forgot-password" method="post">
+            <label for="email-forgot">Correo Electrónico:</label>
+            <input type="email" id="email-forgot" name="email" required>
+
+            <input type="submit" value="Enviar Enlace de Recuperación">
+        </form>
+
+        <a href="#" onclick="toggleForms('login-form')">Volver a Iniciar Sesión</a>
+    </div>
+
+    <script>
+        function toggleForms(formId) {
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('register-form').style.display = 'none';
+            document.getElementById('forgot-form').style.display = 'none';
+            document.getElementById(formId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
+

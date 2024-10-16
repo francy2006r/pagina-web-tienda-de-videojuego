@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Instagram - Pixel Playground</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            background-color: #22a8f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-container {
+            width: 600px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #dbdbdb;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-pic {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .profile-details {
+            flex: 1;
+        }
+
+        .profile-name {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-name .verified {
+            margin-left: 10px;
+            width: 20px;
+        }
+
+        .profile-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .profile-info div {
+            font-size: 16px;
+        }
+
+        .profile-bio {
+            margin-top: 20px;
+        }
+
+        .profile-bio p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .grid-container {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+        }
+
+        .grid-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .follow-btn {
+            padding: 5px 10px;
+            background-color: #0095f6;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .follow-btn:hover {
+            background-color: #007bb5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        <div class="header">
+            <img src="/Img/channels4_profile.jpg" alt="Perfil Pixel Playground" class="profile-pic">
+            <div class="profile-details">
+                <div class="profile-name">
+                    Pixel Playground
+                    <img src="/Img/palomita.jpg" alt="Verificado" class="verified">
+                </div>
+                <div class="profile-info">
+                    <div><strong>6</strong> publicaciones</div>
+                    <div><strong>100.1K</strong> seguidores</div>
+                    <div><strong>20</strong> seguidos</div>
+                </div>
+                <button class="follow-btn">Seguir</button>
+            </div>
+        </div>
+
+        <div class="profile-bio">
+            <p>🎮 Bienvenidos a Pixel Playground</p>
+            <p>📦 Tu tienda de videojuegos retro y modernos</p>
+            <p>🚚 Envíos a todo el mundo</p>
+            <p>🌐 www.pixelplayground.com</p>
+        </div>
+
+        <div class="grid-container">
+            <img src="/Img/clientes.jpg" alt="Post 1">
+            <img src= "/Img/cars.jpg" alt="Post 2">
+            <img src="/Img/control.jpg" alt="Post 3">
+            <img src="/Img/control 2.jpg" alt="Post 4">
+            <img src="/Img/meta 2.jpg" alt="Post 5">
+            <img src="/Img/clientes 2.jpg" alt="Post 6">
+        </div>
+    </div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Facebook - Pixel Playground</title>
+    <style>
+        body {
+            font-family:'Times New Roman', Times, serif, sans-serif;
+            background-color: #4098fc;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .profile-container {
+            width: 700px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #dddfe2;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #dddfe2;
+        }
+
+        .profile-pic {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .profile-details {
+            flex: 1;
+        }
+
+        .profile-name {
+            font-size: 28px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-name .verified {
+            margin-left: 10px;
+            width: 24px;
+        }
+
+        .profile-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .profile-info div {
+            font-size: 16px;
+        }
+
+        .profile-bio {
+            margin-top: 15px;
+            font-size: 16px;
+        }
+
+        .profile-bio p {
+            margin: 5px 0;
+        }
+
+        .follow-btn {
+            padding: 8px 15px;
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .follow-btn:hover {
+            background-color: #155bda;
+        }
+
+        .posts-container {
+            margin-top: 20px;
+        }
+
+        .post {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #dddfe2;
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .post-profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+
+        .post-info {
+            flex: 1;
+        }
+
+        .post-info strong {
+            font-size: 14px;
+        }
+
+        .post-time {
+            font-size: 12px;
+            color: #606770;
+        }
+
+        .post-content {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .post-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .post-likes-comments {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #606770;
+        }
+
+        .post-likes-comments div {
+            display: flex;
+            align-items: center;
+        }
+
+        .icon {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        <!-- Perfil -->
+        <div class="header">
+            <img src="/Img/channels4_profile.jpg" alt="Perfil Pixel Playground" class="profile-pic">
+            <div class="profile-details">
+                <div class="profile-name">
+                    Pixel Playground
+                    <img src="/Img/palomita.jpg" alt="Verificado" class="verified">
+                </div>
+                <div class="profile-info">
+                    <div><strong>50.2K</strong> seguidores</div>
+                    <div><strong>0</strong> seguidos</div>
+                </div>
+                <button class="follow-btn">Seguir</button>
+            </div>
+        </div>
+
+        <div class="profile-bio">
+            <p>🎮 Bienvenidos a Pixel Playground</p>
+            <p>📦 Tu tienda de videojuegos retro y modernos</p>
+            <p>🚚 Envíos a todo el mundo</p>
+            <p>🌐 www.pixelplayground.com</p>
+        </div>
+
+        <!-- Publicaciones -->
+        <div class="posts-container">
+            <!-- Publicación 1 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="/Img/channels4_profile.jpg" alt="Perfil Pixel Playground" class="post-profile-pic">
+                    <div class="post-info">
+                        <strong>Pixel Playground</strong> <br>
+                        <span class="post-time">Hace 2 horas</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    ¡Nueva colección retro disponible ahora! 🕹️✨
+                </div>
+                <img src="/Img/2.jpg" alt="Post 1" class="post-image" width="90" height="90">
+                <div class="post-likes-comments">
+                    <div>
+                        <span>1.2K me gusta</span>
+                    </div>
+                    <div>
+                        <span>150 k comentarios</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Publicación 2 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="/Img/channels4_profile.jpg" alt="Perfil Pixel Playground" class="post-profile-pic">
+                    <div class="post-info">
+                        <strong>Pixel Playground</strong> <br>
+                        <span class="post-time">Hace 5 horas</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    ¡Ofertas en accesorios y más! 🎮 Aprovecha ahora.
+                </div>
+                <img src="/Img/3.jpg" alt="Post 2" class="post-image">
+                <div class="post-likes-comments">
+                    <div>
+                        <span>2K me gusta</span>
+                    </div>
+                    <div>
+                        <span>180 k comentarios</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Publicación 3 -->
+            <div class="post">
+                <div class="post-header">
+                    <img src="/Img/channels4_profile.jpg" alt="Perfil Pixel Playground" class="post-profile-pic">
+                    <div class="post-info">
+                        <strong>Pixel Playground</strong> <br>
+                        <span class="post-time">Hace 1 día</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    ¡Descubre nuestro nuevo catálogo de juegos! 🚀🎮
+                </div>
+                <img src="/Img/4.jpg" alt="Post 3" class="post-image">
+                <div class="post-likes-comments">
+                    <div>
+                        <span>3 mill me gusta</span>
+                    </div>
+                    <div>
+                        <span>220 k comentarios</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

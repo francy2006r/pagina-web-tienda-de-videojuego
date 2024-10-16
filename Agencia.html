@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia de Envío Pixel Playground</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, cursive;
+            background-color: #299eec;
+            color: #eee;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #111;
+            color: #fff;
+            padding: 20px;
+            border-bottom: 5px solid #f39c12;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 10px;
+        }
+        .section {
+            padding: 20px;
+            margin: 10px 0;
+            border: 3px solid #333;
+            border-radius: 10px;
+            background-color: #444;
+            position: relative;
+            overflow: hidden; /* To hide content when collapsed */
+        }
+        .section h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #f39c12;
+        }
+        .section img {
+            width: 100px; /* Size of the small image */
+            height: auto;
+            border: 3px solid #f39c12;
+            margin-bottom: 10px;
+        }
+        .section p {
+            font-size: 18px;
+            color: #fff;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #f39c12;
+            color: #111;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #e67e22;
+        }
+        .more-content {
+            display: none;
+            padding: 10px;
+            background-color: #555;
+            border-top: 2px solid #f39c12;
+            margin-top: 10px;
+        }
+        .details {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Agencia de Envío Pixel Playground</h1>
+    </header>
+    <div class="container">
+        <div class="section" id="terrestre">
+            <h2>Envío Terrestre</h2>
+            <img src="/Img/Envio terrestre.jpg" alt="Envío Terrestre">
+            <p>Envía tus paquetes por carretera con rapidez y seguridad. Ideal para distancias cortas y medianas.</p>
+            <div class="more-content">
+                <div class="details">
+                    <p><strong>Cobro:</strong> $20 - $50</p>
+                    <p><strong>Cobro:</strong> L480 - L1,200</p>
+                    
+                    <p><strong>Hora de Tardanza:</strong> 1-3 días</p>
+                </div>
+            </div>
+            <button class="button" onclick="toggleContent('terrestre')">Ver Más</button>
+        </div>
+        <div class="section" id="aereo">
+            <h2>Envío Aéreo</h2>
+            <img src="/Img/envio aereo.jpg" alt="Envío Aéreo">
+            <p>Transporta tus paquetes por aire para entregas urgentes. Perfecto para envíos internacionales o rápidos.</p>
+            <div class="more-content">
+                <div class="details">
+                    <p><strong>Cobro:</strong> $100 - $300</p>
+                    <p><strong>Hora de Tardanza:</strong> 5 y 10 días</p>
+                </div>
+            </div>
+            <button class="button" onclick="toggleContent('aereo')">Ver Más</button>
+
+    <script>
+        function toggleContent(id) {
+            var content = document.querySelector('#' + id + ' .more-content');
+            var button = document.querySelector('#' + id + ' .button');
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+                button.textContent = 'Ver Más';
+            } else {
+                content.style.display = 'block';
+                button.textContent = 'Ver Menos';
+            }
+        }
+    </script>
+</body>
+</html>
